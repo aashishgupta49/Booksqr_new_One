@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Image from 'next/image';
+import mypic from '../public/logoNew.png';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -10,6 +12,17 @@ const Navbar = () => {
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const MyImage = (props) => {
+    return (
+      <Image
+        src={mypic}
+
+        width="100px"
+        height="100px"
+      />
+    )
+  }
 
   useEffect(() => {
     const changeColor = () => {
@@ -30,8 +43,9 @@ const Navbar = () => {
       className='fixed left-0 top-0 w-full z-10 ease-in duration-300'
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+        <MyImage/>
         <Link href='/'>
-          {/* <img src="logo1.png" alt="" /> */}
+             
           <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
             Captur
           </h1>
