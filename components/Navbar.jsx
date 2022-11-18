@@ -31,6 +31,7 @@ const Navbar = () => {
     >
       <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
         <Link href='/'>
+          {/* <img src="logo1.png" alt="" /> */}
           <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
             Captur
           </h1>
@@ -40,14 +41,15 @@ const Navbar = () => {
             <Link href='/'>Home</Link>
           </li>
           <li className='p-4'>
-            <Link href='/#gallery'>Gallery</Link>
+            <Link href='/#gallery'>Upcomming Books</Link>
           </li>
           <li className='p-4'>
-            <Link href='/work'>Work</Link>
+            <Link href='/work'>Latest</Link>
           </li>
           <li className='p-4'>
             <Link href='/contact'>Contact</Link>
           </li>
+          
         </ul>
 
         {/* Mobile Button */}
